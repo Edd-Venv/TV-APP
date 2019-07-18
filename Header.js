@@ -20,7 +20,6 @@ class Header extends React.Component {
   async componentDidMount() {
     const url = `http://api.tvmaze.com/shows/54`;
     await axios.get(url).then(response => {
-      //console.log(response.data.officialSite);
       this.setState({
         data: response.data,
         image1: response.data.image,
@@ -30,7 +29,6 @@ class Header extends React.Component {
     });
     const url2 = `http://api.tvmaze.com/shows/11`;
     await axios.get(url2).then(response => {
-      //console.log(response.data.officialSite);
       this.setState({
         data: response.data,
         image2: response.data.image,
@@ -49,7 +47,6 @@ class Header extends React.Component {
     });
     const url4 = `http://api.tvmaze.com/shows/7`;
     await axios.get(url4).then(response => {
-      //console.log(response.data.officialSite);
       this.setState({
         data: response.data,
         image4: response.data.image,
@@ -89,7 +86,6 @@ class Header extends React.Component {
                 width: "100px",
                 height: "100px",
                 position: "relative",
-                backgroundColor: "red",
                 animationName: "first",
                 animationDuration: "4s",
                 animationIterationCount: "1",
@@ -112,7 +108,6 @@ class Header extends React.Component {
                 width: "100px",
                 height: "100px",
                 position: "relative",
-                backgroundColor: "red",
                 animationName: "second",
                 animationDuration: "4s",
                 animationIterationCount: "1",
@@ -136,7 +131,6 @@ class Header extends React.Component {
                 height: "100px",
                 position: "relative",
                 marginLeft: "30%",
-                backgroundColor: "red",
                 animationName: "third",
                 animationDuration: "4s",
                 animationIterationCount: "1",
@@ -160,7 +154,6 @@ class Header extends React.Component {
                 height: "100px",
                 position: "relative",
                 marginLeft: "5%",
-                backgroundColor: "red",
                 animationName: "fouth",
                 animationDuration: "4s",
                 animationIterationCount: "1",
