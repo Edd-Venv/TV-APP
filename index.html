@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <script src="https://kit.fontawesome.com/71d8948d71.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+      integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>TV App</title>
+
+    <style>
+      /* START OF BODY ANIMATIONS*/
+      #body1:hover {
+          top: 100px;
+          transition: 0.3s;
+        
+        }
+        /*@keyframes hover{
+          from {
+          left: 0px;
+        }
+        to {
+          left: 848px;
+        }
+        }*/
+        
+        /* START OF HIDE SEARCH*/
+        div.show{
+          display: block
+        }
+        div.hide{
+          display: none
+        }
+        /* END OF HIDE SEARCH*/
+      
+
+ /* END OF BODY ANIMATIONS*/
+
+      /*  START OF ZOOM*/
+      #myImg {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      #myImg:hover {
+        opacity: 0.7;
+      }
+      #myImg1 {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      #myImg1:hover {
+        opacity: 0.7;
+      }
+
+      #myImg2 {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      #myImg2:hover {
+        opacity: 0.7;
+      }
+
+      #myImg3 {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      #myImg3:hover {
+        opacity: 0.7;
+      }
+      .model {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgba(0, 0, 0, 0.1); /* Black w/ opacity */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        
+      }
+      /* Modal Content (image) */
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 23%;
+        max-width: 35%;
+        margin-bottom: 0%;
+      }
+
+      /* Caption of Modal Image */
+      #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        font-size: 1.4em;
+        color: #ffffff;
+        padding: 10px 0;
+        height: 150px;
+        background-color: rgba(0, 0, 0, 0.1); /* Black w/ opacity */
+      }
+
+      /* Add Animation */
+      .modal-content,
+      #caption {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+      }
+      @keyframes zoom {
+        from {
+          transform: scale(0.1);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+      /* The Close Button */
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #ffffff;
+        font-size: 60px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      .close:hover,
+      .close:focus {
+        color: red;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      /* 100% Image Width on Smaller Screens */
+      @media only screen and (max-width: 700px) {
+        .modal-content {
+          width: 100%;
+        }
+      }
+      /*  END OF ZOOM*/
+
+      
+/* @keyframes thirdBODY {
+        from {
+          left: 50px;
+        }
+        to {
+          left: 460px;
+        }
+      }*/
+     
+/* START OF BODY KEY FRAMES*/
+
+@keyframes firstBODY {
+  from {
+          left: 120px;
+        }
+        to {
+          left: 387px;
+        }
+      }
+      @keyframes secondBODY {
+        from {
+          left: 0px;
+        }
+        to {
+          left: 848px;
+        }
+      }
+      @keyframes fouthBODY {
+        from {
+          left: 60px;
+        }
+        to {
+          left: 371px;
+        }
+      }
+/* END OF BODY KEY FRAMES*/
+
+/* HEADER KEY FRAMES*/
+      @keyframes first {
+        from {
+          left: 280px;
+        }
+        to {
+          left: 570px;
+        }
+      }
+      @keyframes second {
+        from {
+          left: 300px;
+        }
+        to {
+          left: 1020px;
+        }
+      }
+      @keyframes third {
+        from {
+          right: 50px;
+        }
+        to {
+          right: 600px;
+        }
+      }
+      @keyframes fouth {
+        from {
+          right: 0px;
+        }
+        to {
+          right: 230px;
+        }
+      }
+    </style>
+  </head>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <h4 style="color: black"><i>Welcome</i></h4>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav" style="margin-left: 80%; font-size: 1.2em">
+          <li class="nav-item active">
+            <a class="nav-link" href="https://edwinushibantu.netlify.com/"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active">
+            <a
+              class="nav-link"
+              href="https://github.com/Edd-Venv/Nasa-APP"
+              target="_blank"
+              >GitHub<span class="sr-only">(current)</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <body>
+      <div id="root"></div>
+      <br>
+      <br>
+      <span>
+          <img
+            id="myImg"
+            src="http://static.tvmaze.com/uploads/images/original_untouched/167/418419.jpg"
+            alt="After a particle accelerator causes a freak storm, CSI Investigator Barry Allen is struck by lightning and falls into a coma. Months later he awakens with the power of super speed."
+            width="300"
+            height="200"
+            style="margin-left: 30px"
+            class="img-thumbnail"
+          />
+          <img
+        id="myImg1"
+        src="http://static.tvmaze.com/uploads/images/original_untouched/0/154.jpg"
+        alt="Based on the wildly popular comic book series 'Hellblazer' from DC Comics, seasoned demon hunter and master of the occult John Constantine is armed with a ferocious knowledge of the dark arts and a wickedly naughty wit."
+        width="300"
+        height="200"
+        style="margin-left: 95px"
+        class="img-thumbnail"
+      /><img
+      id="myImg2"
+      src="http://static.tvmaze.com/uploads/images/original_untouched/0/184.jpg"
+      alt="Kiera Cameron, a regular cop from 65 years in the future who finds herself trapped in present day Vancouver. She is alone, a stranger in a strange land, and has eight of the most ruthless criminals from the future."
+      width="300"
+      height="200"
+      style="margin-left: 8%"
+      class="img-thumbnail"
+    />
+    <img
+      id="myImg3"
+      src="http://static.tvmaze.com/uploads/images/original_untouched/167/418968.jpg"
+      alt="This haunting series follows the Winchester brothers as they crisscross the lonely and mysterious back roads of the country in their '67 Chevy Impala, hunting down every evil supernatural force they encounter along the way."
+      width="300"
+      height="200"
+      style="margin-left: 100px"
+      class="img-thumbnail"
+    />
+        </span>
+        <br>
+    <br>
+    <br>
+    <br>
+        <br>
+        <br>
+        <br>
+    <br>
+    <br>
+        <br>
+        <br>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark "></nav>
+      <div id="myModal" class="modal" style="margin-top: 8%">
+          <span class="close" style="color: red; margin-right: 24%">
+            ×
+          </span>
+          <img class="modal-content" id="img01" />
+          <div id="caption" >
+        </div>
+        
+
+    <script>
+      const modal = document.getElementById("myModal");
+      const img = document.getElementById("myImg");
+      const img1 = document.getElementById("myImg1");
+      const img2 = document.getElementById("myImg2");
+      const img3 = document.getElementById("myImg3");
+      const modalImg = document.getElementById("img01");
+      const captionText = document.getElementById("caption");
+
+      img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      };
+      const span = document.getElementsByClassName("close")[0];
+      span.onclick = function() {
+        modal.style.display = "none";
+      };
+      img1.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      };
+      const span1 = document.getElementsByClassName("close")[0];
+      span1.onclick = function() {
+        modal.style.display = "none";
+      };
+
+      img2.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      };
+      const span2 = document.getElementsByClassName("close")[0];
+      span2.onclick = function() {
+        modal.style.display = "none";
+      };
+
+      img3.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      };
+      const span3 = document.getElementsByClassName("close")[0];
+      span3.onclick = function() {
+        modal.style.display = "none";
+      };
+    </script>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+  </body>
+</html>
