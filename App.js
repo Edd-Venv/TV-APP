@@ -4,7 +4,6 @@ import axios from "axios";
 import Header from "./components/Header.js";
 import Search from "./components/Search.js";
 import Body from "./components/Body.js";
-import Slider from "./components/Slider.js";
 
 class App extends React.Component {
   constructor(props) {
@@ -12,13 +11,6 @@ class App extends React.Component {
     this.state = {
       isLoaded: false
     };
-  }
-
-  async componentDidMount() {
-    const url = "";
-    axios.get(url).then(response => {
-      //console.log(response);
-    });
   }
 
   render() {
