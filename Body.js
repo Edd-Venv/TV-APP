@@ -21,9 +21,6 @@ class Body extends React.Component {
   async componentDidMount() {
     const url = `http://api.tvmaze.com/shows/30`;
     await Axios.get(url).then(response => {
-      //response.data.slice(0, 5)
-      //American horror story
-      //console.log(response.data.officialSite);
       this.setState({
         isLoaded: true,
         data: response.data,
@@ -33,7 +30,6 @@ class Body extends React.Component {
     });
     const url1 = `http://api.tvmaze.com/shows/128`;
     await Axios.get(url1).then(response => {
-      //console.log(response.data.officialSite);
       this.setState({
         isLoaded: true,
         data: response.data,
@@ -43,7 +39,6 @@ class Body extends React.Component {
     });
     const url2 = `http://api.tvmaze.com/shows/50`;
     await Axios.get(url2).then(response => {
-      //console.log(response.data.officialSite);
       this.setState({
         isLoaded: true,
         data: response.data,
@@ -53,7 +48,6 @@ class Body extends React.Component {
     });
     const url3 = `http://api.tvmaze.com/shows/58`;
     await Axios.get(url3).then(response => {
-      //console.log(response.data.officialSite);
       this.setState({
         isLoaded: true,
         data: response.data,
