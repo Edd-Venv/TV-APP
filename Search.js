@@ -13,11 +13,13 @@ class Search extends React.Component {
       summary: []
     };
   }
+  
   handleChange = event => {
     this.setState({
       value: event.target.value
     });
   };
+
   handleSubmit = event => {
     event.preventDefault();
     const url = `http://api.tvmaze.com/search/shows?q=${
@@ -40,6 +42,7 @@ class Search extends React.Component {
       });
     });
   };
+
   handleClick = event => {
     this.setState({
       display: "hide"
