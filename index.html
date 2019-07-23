@@ -47,6 +47,36 @@
         }
         /* END OF HIDE SEARCH*/
       
+      /* START OF SEARCH BAR STYLING*/
+.input{
+  border:none;
+}
+#input:hover{
+  border: 2px solid;
+  border-radius:5px;
+  animation-name: borderEffect;
+  animation-duration: 1.5s;
+  animation-delay: -0.5s;
+  animation-iteration-count: 2;
+  animation-timing-function: ease-in-out;
+  transition: 0.3s
+  
+}
+
+@keyframes borderEffect {
+  0%   {border-top-style: solid;
+  border-top-color: whitesmoke;}
+  25%  {border-right-style: solid;
+  border-right-color: whitesmoke;}
+  50%  {border-bottom-style: solid;
+  border-bottom-color: whitesmoke;}
+  100% {
+  border-left-style: solid;
+  border-left-color:whitesmoke;}
+}
+
+/* END OF SEARCH BAR STYLING*/
+      
 
  /* END OF BODY ANIMATIONS*/
 
