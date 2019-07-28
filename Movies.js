@@ -1,7 +1,7 @@
 import React from "react";
 import Axios from "axios";
 
-class Moives extends React.Component {
+class Movies extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,7 +14,7 @@ class Moives extends React.Component {
   }
 
   async componentDidMount() {
-    const apiKey = "728de06e";
+    const apiKey = "";
     const url = `http://www.omdbapi.com/?t=Bohemian Rhapsody&apikey=${apiKey}`;
     Axios.get(url).then(response => {
       this.setState({
@@ -38,8 +38,7 @@ class Moives extends React.Component {
     });
     const url4 = `http://www.omdbapi.com/?t=Jurassic World: Fallen Kingdom&apikey=${apiKey}`;
     Axios.get(url4).then(response => {
-      //console.log(response.data);
-      this.setState({
+        this.setState({
         isLoaded: true,
         Movies4: response.data
       });
@@ -123,4 +122,4 @@ class Moives extends React.Component {
   }
 }
 
-export default Moives;
+export default Movies;
