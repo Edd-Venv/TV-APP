@@ -14,12 +14,11 @@ class MoiveSearch extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const apiKey = "728de06e";
+    const apiKey = "";
     const url = `http://www.omdbapi.com/?t=${
       this.state.value
     }&apikey=${apiKey}`;
     Axios.get(url).then(response => {
-      //console.log(response.data);
       this.setState({
         isLoaded: true,
         Movies: response.data,
