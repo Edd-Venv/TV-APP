@@ -1,7 +1,7 @@
 import React from "react";
 import Axios from "axios";
 
-class MoiveSearch extends React.Component {
+class MovieSearch extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -143,4 +143,4 @@ class MoiveSearch extends React.Component {
   }
 }
 
-export default MoiveSearch;
+export default MovieSearch;
