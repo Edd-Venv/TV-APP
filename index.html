@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5" />
     <meta name="theme-color" content="#000000" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
@@ -36,6 +36,7 @@
       #body1:hover {
           top: 100px;
           transition: 0.3s;
+        
         }
         
         /* START OF HIDE SEARCH*/
@@ -47,49 +48,22 @@
         }
         /* END OF HIDE SEARCH*/
       
-      /* START OF SEARCH BAR STYLING*/
-.input{
-  border:none;
+        .close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #ffffff;
+  font-size: 60px;
+  font-weight: bold;
+  transition: 0.3s;
+  z-index: 1;
 }
-#input:hover{
-  border: 2px solid;
-  border-radius:5px;
-  animation-name: borderEffect;
-  animation-duration: 1.5s;
-  animation-delay: -0.5s;
-  animation-iteration-count: 2;
-  animation-timing-function: ease-in-out;
-  transition: 0.3s
-  
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
 }
-
-@keyframes borderEffect {
-  0%   {border-top-style: solid;
-  border-top-color: whitesmoke;}
-  25%  {border-right-style: solid;
-  border-right-color: whitesmoke;}
-  50%  {border-bottom-style: solid;
-  border-bottom-color: whitesmoke;}
-  100% {
-  border-left-style: solid;
-  border-left-color:whitesmoke;}
-}
-
-/* END OF SEARCH BAR STYLING*/
-      /* START OF SEARCH BUTTON STYLING*/
-      #SearchButton {
-        background-color: rgba(0, 0, 0, 0);
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
-        border: 2.01px solid grey;
-        border-right: none;
-        padding-top: 1%;
-        padding-bottom: 1%;
-        outline: 0
-      }
-      /* END OF SEARCH BUTTON STYLING*/
-      
-
  /* END OF BODY ANIMATIONS*/
 
       /*  START OF ZOOM*/
@@ -143,7 +117,7 @@
         overflow: auto; /* Enable scroll if needed */
         background-color: rgba(0, 0, 0, 0.1); /* Black w/ opacity */
         background-color: rgb(0, 0, 0); /* Fallback color */
-        
+        min-width: 60px;
       }
       /* Modal Content (image) */
       .modal-content {
@@ -168,7 +142,7 @@
         background-color: rgba(0, 0, 0, 0.1); /* Black w/ opacity */
       }
 
-      /* Animation */
+      /* Add Animation */
       .modal-content,
       #caption {
         -webkit-animation-name: zoom;
@@ -184,22 +158,7 @@
           transform: scale(1);
         }
       }
-      /* The Close Button */
-      .close {
-        position: absolute;
-        top: 15px;
-        right: 35px;
-        color: #ffffff;
-        font-size: 60px;
-        font-weight: bold;
-        transition: 0.3s;
-      }
-      .close:hover,
-      .close:focus {
-        color: red;
-        text-decoration: none;
-        cursor: pointer;
-      }
+     
       /* 100% Image Width on Smaller Screens */
       @media only screen and (max-width: 700px) {
         .modal-content {
@@ -208,68 +167,22 @@
       }
       /*  END OF ZOOM*/
 
+      
+#box:hover {
+box-shadow: 0px 1px 9px whitesmoke;
+opacity: 0.8 grey;
+transition: 0.2s;
+}
+
+
+       /* 100% Image Width on Smaller Screens */
+       @media only screen and (max-width: 700px) {
+        .modal-content {
+          width: 100%;
+        }
+      }
+
      
-/* START OF BODY KEY FRAMES*/
-
-@keyframes firstBODY {
-  from {
-          left: 120px;
-        }
-        to {
-          left: 387px;
-        }
-      }
-      @keyframes secondBODY {
-        from {
-          left: 0px;
-        }
-        to {
-          left: 848px;
-        }
-      }
-      @keyframes fouthBODY {
-        from {
-          left: 60px;
-        }
-        to {
-          left: 371px;
-        }
-      }
-/* END OF BODY KEY FRAMES*/
-
-/* HEADER KEY FRAMES*/
-      @keyframes first {
-        from {
-          left: 280px;
-        }
-        to {
-          left: 570px;
-        }
-      }
-      @keyframes second {
-        from {
-          left: 300px;
-        }
-        to {
-          left: 1020px;
-        }
-      }
-      @keyframes third {
-        from {
-          right: 50px;
-        }
-        to {
-          right: 600px;
-        }
-      }
-      @keyframes fouth {
-        from {
-          right: 0px;
-        }
-        to {
-          right: 230px;
-        }
-      }
     </style>
   </head>
   <header>
@@ -296,7 +209,7 @@
           <li class="nav-item active">
             <a
               class="nav-link"
-              href="https://github.com/Edd-Venv/Nasa-APP"
+              href="https://github.com/Edd-Venv/TV-APP"
               target="_blank"
               >GitHub<span class="sr-only">(current)</span></a
             >
@@ -310,60 +223,54 @@
       <div id="root"></div>
       <br>
       <br>
-      <span>
+      <div style=" width: 85%; max-width: 980px; margin: 0 auto;">
+        <div style="width: 100%; min-width: 150px; display: flex; justify-content: space-between;">
+        <div style="width: 22%; min-width: 60px; ">
           <img
             id="myImg"
             src="http://static.tvmaze.com/uploads/images/original_untouched/167/418419.jpg"
             alt="After a particle accelerator causes a freak storm, CSI Investigator Barry Allen is struck by lightning and falls into a coma. Months later he awakens with the power of super speed."
-            width="300"
-            height="200"
-            style="margin-left: 30px"
+            width="100%"
             class="img-thumbnail"
-          />
-          <img
-        id="myImg1"
-        src="http://static.tvmaze.com/uploads/images/original_untouched/0/154.jpg"
-        alt="Based on the wildly popular comic book series 'Hellblazer' from DC Comics, seasoned demon hunter and master of the occult John Constantine is armed with a ferocious knowledge of the dark arts and a wickedly naughty wit."
-        width="300"
-        height="200"
-        style="margin-left: 95px"
-        class="img-thumbnail"
-      /><img
-      id="myImg2"
-      src="http://static.tvmaze.com/uploads/images/original_untouched/0/184.jpg"
-      alt="Kiera Cameron, a regular cop from 65 years in the future who finds herself trapped in present day Vancouver. She is alone, a stranger in a strange land, and has eight of the most ruthless criminals from the future."
-      width="300"
-      height="200"
-      style="margin-left: 8%"
-      class="img-thumbnail"
-    />
-    <img
-      id="myImg3"
-      src="http://static.tvmaze.com/uploads/images/original_untouched/167/418968.jpg"
-      alt="This haunting series follows the Winchester brothers as they crisscross the lonely and mysterious back roads of the country in their '67 Chevy Impala, hunting down every evil supernatural force they encounter along the way."
-      width="300"
-      height="200"
-      style="margin-left: 100px"
-      class="img-thumbnail"
-    />
-        </span>
-        <br>
-    <br>
-    <br>
-    <br>
-        <br>
-        <br>
-        <br>
-    <br>
-    <br>
-        <br>
-        <br>
+            />
+        </div>
+          <div style="width: 22%; min-width: 60px;">
+            <img
+              id="myImg1"
+              src="http://static.tvmaze.com/uploads/images/original_untouched/0/154.jpg"
+              alt="Based on the wildly popular comic book series 'Hellblazer' from DC Comics, seasoned demon hunter and master of the occult John Constantine is armed with a ferocious knowledge of the dark arts and a wickedly naughty wit."
+              width="100%"
+              class="img-thumbnail"
+            />
+          </div>
+          <div style="width: 22%; min-width: 60px; ">
+            <img
+              id="myImg2"
+              src="http://static.tvmaze.com/uploads/images/original_untouched/0/184.jpg"
+              alt="Kiera Cameron, a regular cop from 65 years in the future who finds herself trapped in present day Vancouver. She is alone, a stranger in a strange land, and has eight of the most ruthless criminals from the future."
+              width="100%" 
+              class="img-thumbnail"
+            />
+          </div>
+          <div style="width: 22%; min-width: 60px;">
+            <img
+            id="myImg3"
+            src="http://static.tvmaze.com/uploads/images/original_untouched/167/418968.jpg"
+            alt="This haunting series follows the Winchester brothers as they crisscross the lonely and mysterious back roads of the country in their '67 Chevy Impala, hunting down every evil supernatural force they encounter along the way."
+            width="100%"
+            class="img-thumbnail"
+            />
+          </div>
+        </div>
+      </div>
+    
+  
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark "></nav>
-      <div id="myModal" class="modal" style="margin-top: 8%">
+      <div id="myModal" class="modal" style="margin-top: 8%" max-width= "500px" margin= "auto" >
           <span class="close" style="color: red; margin-right: 24%">
             ×
           </span>
-          <img class="modal-content" id="img01" />
+          <img class="modal-content" id="img01" max-width="300px" margin="auto"/>
           <div id="caption" >
         </div>
         
