@@ -1,5 +1,6 @@
 import React from "react";
 import Axios from "axios";
+import "./Body.css";
 
 class Body extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class Body extends React.Component {
   }
 
   async componentDidMount() {
-    const url = `http://api.tvmaze.com/shows/30`;
+    const url = `https://cors-anywhere.herokuapp.com/https://api.tvmaze.com/shows/30`;
     await Axios.get(url).then(response => {
       this.setState({
         isLoaded: true,
@@ -28,7 +29,7 @@ class Body extends React.Component {
         Link: response.data.officialSite
       });
     });
-    const url1 = `http://api.tvmaze.com/shows/128`;
+    const url1 = `https://cors-anywhere.herokuapp.com/https://api.tvmaze.com/shows/128`;
     await Axios.get(url1).then(response => {
       this.setState({
         isLoaded: true,
@@ -37,7 +38,7 @@ class Body extends React.Component {
         Link1: response.data.officialSite
       });
     });
-    const url2 = `http://api.tvmaze.com/shows/50`;
+    const url2 = `https://cors-anywhere.herokuapp.com/https://api.tvmaze.com/shows/50`;
     await Axios.get(url2).then(response => {
       this.setState({
         isLoaded: true,
@@ -46,7 +47,7 @@ class Body extends React.Component {
         Link2: response.data.officialSite
       });
     });
-    const url3 = `http://api.tvmaze.com/shows/58`;
+    const url3 = `https://cors-anywhere.herokuapp.com/https://api.tvmaze.com/shows/58`;
     await Axios.get(url3).then(response => {
       this.setState({
         isLoaded: true,
@@ -58,100 +59,53 @@ class Body extends React.Component {
   }
 
   render() {
-    const {
-      image,
-      image1,
-      image2,
-      image3,
-      Link,
-      Link1,
-      Link2,
-      Link3,
-      isLoaded
-    } = this.state;
+    const { image, image1, image3, Link, Link1, Link3, isLoaded } = this.state;
     return (
       <React.Fragment>
-        {isLoaded === false ? (
-          <div
-            class="spinner-grow text-dark"
-            role="status"
-            style={{ marginLeft: "50%" }}
-          >
-            <span class="sr-only">Loading...</span>
-          </div>
-        ) : (
-          <span>
-            <span
-              style={{
-                width: "100px",
-                height: "100px",
-                position: "relative",
-                animationName: "firstBODY",
-                animationDuration: "4s",
-                animationIterationCount: "1",
-                animationTimingFunction: "ease",
-                animationFillMode: "forwards",
-                animationDelay: "-0.5s"
-              }}
+        <div className="flex-containerBody">
+          {isLoaded === false ? (
+            <div
+              className="spinner-grow text-dark"
+              role="status"
+              style={{ marginLeft: "50%" }}
             >
-              <a href={Link} target="_blank">
-                <img
-                  alt="loading"
-                  src={image.original}
-                  className="img-thumbnail"
-                  style={{ width: "170px" }}
-                  id="body1"
-                />
-              </a>
-            </span>
-            <span
-              style={{
-                width: "100px",
-                height: "100px",
-                position: "relative",
-                animationName: "secondBODY",
-                animationDuration: "4s",
-                animationIterationCount: "1",
-                animationTimingFunction: "ease",
-                animationFillMode: "forwards",
-                animationDelay: "-0.5s"
-              }}
-            >
-              <a href={Link1} target="_blank">
-                <img
-                  alt="loading"
-                  src={image1.original}
-                  className="img-thumbnail"
-                  style={{ width: "170px" }}
-                  id="body1"
-                />
-              </a>
-            </span>
-            <span
-              style={{
-                width: "100px",
-                height: "100px",
-                position: "relative",
-                animationName: "fouthBODY",
-                animationDuration: "4s",
-                animationIterationCount: "1",
-                animationTimingFunction: "ease",
-                animationFillMode: "forwards",
-                animationDelay: "-0.5s"
-              }}
-            >
-              <a href={Link3} target="_blank">
-                <img
-                  alt="loading"
-                  src={image3.original}
-                  className="img-thumbnail"
-                  style={{ width: "170px" }}
-                  id="body1"
-                />
-              </a>
-            </span>
-          </span>
-        )}
+              <span className="sr-only">Loading...</span>
+            </div>
+          ) : (
+            <React.Fragment>
+              <div className="body1">
+                <a href={Link} target="_blank" rel="noopener noreferrer">
+                  <img
+                    alt="loading"
+                    src={image.original}
+                    className="img-thumbnail"
+                    id="box"
+                  />
+                </a>
+              </div>
+              <div className="body2">
+                <a href={Link1} target="_blank" rel="noopener noreferrer">
+                  <img
+                    alt="loading"
+                    src={image1.original}
+                    className="img-thumbnail"
+                    id="box"
+                  />
+                </a>
+              </div>
+              <div className="body3">
+                <a href={Link3} target="_blank" rel="noopener noreferrer">
+                  <img
+                    alt="loading"
+                    src={image3.original}
+                    className="img-thumbnail"
+                    id="box"
+                  />
+                </a>
+              </div>
+            </React.Fragment>
+          )}
+        </div>
       </React.Fragment>
     );
   }
