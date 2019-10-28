@@ -1,0 +1,68 @@
+.flex-containerBody {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  max-width: 70%;
+  min-width: 50%;
+}
+.body1 {
+  animation-name: firstBODY;
+  animation-delay: -0.5s;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  min-width: 60px;
+  position: sticky;
+  width: 19.5%;
+}
+
+.body2 {
+  animation-name: secondBODY;
+  animation-delay: -0.5s;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  min-width: 60px;
+  position: sticky;
+  width: 19.5%;
+}
+.body3 {
+  animation-name: thirdBODY;
+  animation-delay: -0.5s;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  min-width: 60px;
+  position: sticky;
+  width: 19.5%;
+}
+@keyframes firstBODY {
+  from {
+    right: 30%;
+  }
+  to {
+    right: 50%;
+  }
+}
+@keyframes secondBODY {
+  from {
+    left: 10%;
+  }
+  to {
+    left: 62.5%;
+  }
+}
+@keyframes thirdBODY {
+  from {
+    right: 0%;
+  }
+  to {
+    right: 43.3%;
+  }
+}
+img {
+  width: 100%;
+}
