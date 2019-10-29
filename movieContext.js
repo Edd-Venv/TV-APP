@@ -14,7 +14,7 @@ class MovieContextProvider extends React.Component {
 
   async componentDidMount() {
     document.title = "Home Page";
-    const apiKey = "728de06e";
+    const apiKey = "";
     const url = `https://www.omdbapi.com/?t=Bohemian Rhapsody&apikey=${apiKey}`;
     Axios.get(url).then(response => {
       this.setState({
