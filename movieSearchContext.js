@@ -14,7 +14,7 @@ class MovieSearchContextProvider extends React.Component {
   };
   handleSubmit = event => {
     event.preventDefault();
-    const apiKey = "728de06e";
+    const apiKey = "";
     const url = `https://www.omdbapi.com/?t=${this.state.value}&apikey=${apiKey}`;
     Axios.get(url).then(response => {
       this.setState({
@@ -24,7 +24,7 @@ class MovieSearchContextProvider extends React.Component {
         value: ""
       });
     });
-    const apiKeyVideo = "341314-MusicApp-1I2LKOB1";
+    const apiKeyVideo = "";
     const urlVideo = `https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?q=${this.state.value}&type=movies&info=1&verbose=1&k=${apiKeyVideo}`;
     Axios.get(urlVideo).then(responseVideo => {
       this.setState({
