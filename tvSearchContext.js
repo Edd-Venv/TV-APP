@@ -40,7 +40,7 @@ class TvSearchContextProvider extends React.Component {
         value: ""
       });
     });
-    const apiKeyShow = "341314-MusicApp-1I2LKOB1";
+    const apiKeyShow = "";
     const urlShow = `https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?q=${this.state.value}&type=shows&info=1&verbose=1&k=${apiKeyShow}`;
     Axios.get(urlShow).then(responseShow => {
       console.log(responseShow.data.Similar.Info[0]);
