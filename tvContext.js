@@ -27,7 +27,7 @@ class TvContextProvider extends React.Component {
   };
   async componentDidMount() {
     document.title = "Home Page";
-    const url = `https://cors-anywhere.herokuapp.com/https://api.tvmaze.com/shows/54`;
+    const url = ``;
     await axios.get(url).then(response => {
       this.setState({
         headerData: response.data,
@@ -36,7 +36,7 @@ class TvContextProvider extends React.Component {
         headerLink1: response.data.officialSite
       });
     });
-    const url2 = `https://cors-anywhere.herokuapp.com/https://api.tvmaze.com/shows/11`;
+    const url2 = ``;
     await axios.get(url2).then(response => {
       this.setState({
         headerData: response.data,
@@ -45,7 +45,7 @@ class TvContextProvider extends React.Component {
         headerLink2: response.data.officialSite
       });
     });
-    const url3 = `https://cors-anywhere.herokuapp.com/https://api.tvmaze.com/shows/52`;
+    const url3 = ``;
     await axios.get(url3).then(response => {
       this.setState({
         headerData: response.data,
@@ -54,7 +54,7 @@ class TvContextProvider extends React.Component {
         headerLink3: response.data.officialSite
       });
     });
-    const url4 = `https://cors-anywhere.herokuapp.com/https://api.tvmaze.com/shows/7`;
+    const url4 = ``;
     await axios.get(url4).then(response => {
       this.setState({
         headerData: response.data,
@@ -66,7 +66,7 @@ class TvContextProvider extends React.Component {
 
     /*BODY CONTEXT API BELOW */
 
-    const url11 = `https://cors-anywhere.herokuapp.com/https://api.tvmaze.com/shows/30`;
+    const url11 = ``;
     await axios.get(url11).then(response => {
       this.setState({
         isLoaded: true,
@@ -75,7 +75,7 @@ class TvContextProvider extends React.Component {
         BodyLink: response.data.officialSite
       });
     });
-    const url12 = `https://cors-anywhere.herokuapp.com/https://api.tvmaze.com/shows/128`;
+    const url12 = ``;
     await axios.get(url12).then(response => {
       this.setState({
         isLoaded: true,
@@ -84,7 +84,7 @@ class TvContextProvider extends React.Component {
         BodyLink1: response.data.officialSite
       });
     });
-    const url13 = `https://cors-anywhere.herokuapp.com/https://api.tvmaze.com/shows/50`;
+    const url13 = ``;
     await axios.get(url13).then(response => {
       this.setState({
         isLoaded: true,
@@ -93,7 +93,7 @@ class TvContextProvider extends React.Component {
         BodyLink2: response.data.officialSite
       });
     });
-    const url14 = `https://cors-anywhere.herokuapp.com/https://api.tvmaze.com/shows/58`;
+    const url14 = ``;
     await axios.get(url14).then(response => {
       this.setState({
         isLoaded: true,
